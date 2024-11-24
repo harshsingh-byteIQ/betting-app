@@ -7,6 +7,8 @@ const HeaderComponent = () => {
       <Col style={{paddingTop:"2vh"}}>
         <Input.Search placeholder="Search Event..." style={{ width: 400 }} />
       </Col>
+
+      
       <Col>
         <Button
           style={{
