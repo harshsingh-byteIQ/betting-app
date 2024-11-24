@@ -1,0 +1,80 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 10px;
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .topbar_item {
+    position: relative;
+    padding: 7px 10px;
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect */
+  .topbar_item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  /* Active tab styling */
+  .topbar_item.active {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    
+  }
+  
+  /* Badge styling */
+  .topbar_badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e63946; /* Red color */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 2s infinite; /* Add fading animation */
+  }
+  
+  /* Fading animation */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .topbar_item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position below the button */
+    left: 50%; /* Center the triangle */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left side of the triangle */
+    border-right: 10px solid transparent; /* Right side of the triangle */
+    border-top: 10px solid #000; /* Top color matches the active background */
+  }
+  
